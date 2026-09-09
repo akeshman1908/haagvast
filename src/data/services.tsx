@@ -1,0 +1,1158 @@
+﻿import type { LandingPageData } from "@/components/templates/LandingPageTemplate/LandingPageTemplate.tsx";
+
+export type ServicePage = {
+  slug: string;
+  seo: {
+    title: string;
+    description: string;
+  };
+  data: LandingPageData;
+};
+
+export const servicePages: ServicePage[] = [
+  {
+    slug: "huis-snel-verkopen",
+
+    seo: {
+      title: "Huis snel verkopen",
+      description:
+        "Wilt u snel duidelijkheid over de verkoop van uw woning? HaagVast bekijkt woningen rechtstreeks in regio Haaglanden, ook wanneer modernisering nodig is.",
+    },
+
+    data: {
+      hero: {
+        eyebrow: "Snel duidelijkheid",
+        title: "Uw huis snel verkopen zonder onnodig lang verkooptraject",
+        description:
+          "Wilt u vooral weten waar u aan toe bent? HaagVast bekijkt woningen rechtstreeks van eigenaren in regio Haaglanden en bespreekt snel of er een goede aansluiting is.",
+        benefits: [
+          {
+            label: "Rechtstreeks contact",
+          },
+          {
+            label: "Vrijblijvende beoordeling",
+          },
+          {
+            label: "Ook kluswoningen",
+          },
+          {
+            label: "Planning bespreekbaar",
+          },
+        ],
+        leadFormTitle: "Laat uw woning vrijblijvend bekijken",
+        leadFormDescription:
+          "Start met uw postcode en huisnummer. Daarna nemen we contact met u op om de situatie kort te bespreken.",
+        leadSource: "service-huis-snel-verkopen",
+      },
+
+      trustItems: [
+        {
+          label: "Vrijblijvend aanmelden",
+          icon: "check",
+        },
+        {
+          label: "Rechtstreeks contact",
+          icon: "handshake",
+        },
+        {
+          label: "Actief in Haaglanden",
+          icon: "house",
+        },
+        {
+          label: "Snel duidelijkheid",
+          icon: "clock",
+        },
+      ],
+
+      benefits: {
+        eyebrow: "Wanneer snelheid belangrijk is",
+        title:
+          "Niet iedere woning hoeft via een lang traditioneel verkooptraject",
+        description:
+          "Een snelle verkoop draait niet alleen om tempo. Duidelijkheid over voorwaarden, planning en de staat van de woning is minstens zo belangrijk.",
+        items: [
+          {
+            icon: "message",
+            title: "Korte communicatielijnen",
+            description:
+              "U bespreekt uw situatie rechtstreeks met HaagVast zonder onnodige tussenlagen.",
+          },
+          {
+            icon: "key",
+            title: "Planning afstemmen",
+            description:
+              "We bespreken welke overdrachtsdatum praktisch past bij uw situatie.",
+          },
+          {
+            icon: "hammer",
+            title: "Niet eerst volledig verbouwen",
+            description:
+              "Een oude keuken, badkamer of afwerking hoeft niet eerst vervangen te worden voordat u de woning aanmeldt.",
+          },
+          {
+            icon: "check",
+            title: "Eerst vrijblijvend bekijken",
+            description:
+              "U kunt eerst laten beoordelen of de woning aansluit voordat u verdere keuzes maakt.",
+          },
+        ],
+      },
+
+      process: {
+        eyebrow: "Werkwijze",
+        title: "Zo krijgt u snel duidelijkheid",
+        description: "We houden de eerste stappen bewust eenvoudig.",
+        steps: [
+          {
+            icon: "house",
+            title: "Woning aanmelden",
+            description:
+              "Vul het adres en uw contactgegevens in via het formulier.",
+          },
+          {
+            icon: "message",
+            title: "Situatie bespreken",
+            description:
+              "We nemen contact op en bespreken kort waarom en wanneer u wilt verkopen.",
+          },
+          {
+            icon: "clipboard",
+            title: "Woning beoordelen",
+            description:
+              "We kijken naar ligging, woningtype, staat en beschikbare informatie.",
+          },
+          {
+            icon: "check",
+            title: "Vervolg bepalen",
+            description:
+              "Als de woning interessant is, bespreken we welke vervolgstappen logisch zijn.",
+          },
+        ],
+      },
+
+      contentSections: [
+        {
+          eyebrow: "Snel verkopen",
+          title: "Wat betekent een huis snel verkopen eigenlijk?",
+          description:
+            "Snel verkopen betekent niet dat u overhaast moet handelen. Het betekent vooral dat onnodige stappen worden beperkt.",
+          content: (
+            <>
+              <p>
+                Bij een traditioneel traject kunnen onder andere styling,
+                fotografie, bezichtigingen, onderhandelingen en
+                financieringsvoorwaarden tijd kosten.
+              </p>
+
+              <p>
+                Wanneer u rechtstreeks met een potentiÃ«le koper praat, kan veel
+                eerder duidelijk worden of een verkoop realistisch is en welke
+                voorwaarden daarbij horen.
+              </p>
+            </>
+          ),
+        },
+
+        {
+          eyebrow: "Uw situatie",
+          title: "Wanneer kan snelheid extra belangrijk zijn?",
+          description:
+            "Er zijn verschillende redenen waarom een eigenaar niet maandenlang met een verkoopproces bezig wil zijn.",
+          content: (
+            <ul>
+              <li>U heeft al een andere woning op het oog.</li>
+              <li>De woning staat leeg.</li>
+              <li>Er is sprake van een nalatenschap.</li>
+              <li>De woning heeft veel onderhoud nodig.</li>
+              <li>U wilt eerst duidelijkheid voordat u grote kosten maakt.</li>
+              <li>U wilt liever zo min mogelijk bezichtigingen.</li>
+            </ul>
+          ),
+          muted: true,
+          reversed: true,
+        },
+      ],
+
+      propertyTypes: {
+        eyebrow: "Verschillende woningen",
+        title: "Ook woningen die niet direct verkoopklaar zijn",
+        description: "De huidige staat hoeft niet perfect te zijn.",
+        items: [
+          {
+            icon: "apartment",
+            title: "Appartementen",
+            description:
+              "Ook appartementen binnen een VvE of oudere wooncomplexen.",
+          },
+          {
+            icon: "home",
+            title: "Eengezinswoningen",
+            description:
+              "Rijtjeswoningen, hoekwoningen en andere grondgebonden woningen.",
+          },
+          {
+            icon: "hammer",
+            title: "Kluswoningen",
+            description:
+              "Woningen waar keuken, badkamer, installaties of afwerking gemoderniseerd moeten worden.",
+          },
+          {
+            icon: "wrench",
+            title: "Woningen met onderhoud",
+            description:
+              "Technisch of cosmetisch achterstallig onderhoud hoeft geen probleem te zijn.",
+          },
+        ],
+      },
+
+      faq: {
+        eyebrow: "Veelgestelde vragen",
+        title: "Veelgestelde vragen over snel uw huis verkopen",
+        items: [
+          {
+            question: "Moet mijn woning eerst helemaal verkoopklaar zijn?",
+            answer: (
+              <p>
+                Nee. U kunt een woning ook aanmelden wanneer deze verouderd is
+                of nog werkzaamheden nodig heeft.
+              </p>
+            ),
+          },
+          {
+            question:
+              "Is snel verkopen hetzelfde als onder de marktwaarde verkopen?",
+            answer: (
+              <p>
+                Niet automatisch. De waarde hangt af van de woning, ligging,
+                staat, benodigde werkzaamheden en de voorwaarden van een
+                mogelijke verkoop.
+              </p>
+            ),
+          },
+          {
+            question: "Kan ik eerst alleen laten bekijken wat mogelijk is?",
+            answer: (
+              <p>
+                Ja. Een eerste aanvraag is vrijblijvend en bedoeld om te bepalen
+                of verdere gesprekken zinvol zijn.
+              </p>
+            ),
+          },
+          {
+            question: "Is een snelle overdracht verplicht?",
+            answer: (
+              <p>
+                Nee. De planning wordt in overleg bepaald. Snel duidelijkheid
+                krijgen hoeft niet te betekenen dat de overdracht direct moet
+                plaatsvinden.
+              </p>
+            ),
+          },
+        ],
+      },
+
+      relatedContent: {
+        eyebrow: "Meer informatie",
+        title: "Bekijk ook deze pagina's",
+        items: [
+          {
+            icon: "service",
+            title: "Huis verkopen zonder makelaar",
+            description:
+              "Meer over rechtstreeks verkopen zonder traditioneel makelaarstraject.",
+            href: "/huis-verkopen-zonder-makelaar",
+          },
+          {
+            icon: "service",
+            title: "Kluswoning verkopen",
+            description:
+              "Specifiek voor woningen waar renovatie of modernisering nodig is.",
+            href: "/kluswoning-verkopen",
+          },
+          {
+            icon: "region",
+            title: "Woning verkopen in Den Haag",
+            description: "Bekijk onze lokale informatie voor Den Haag.",
+            href: "/regio/den-haag",
+          },
+        ],
+      },
+
+      finalCta: {
+        eyebrow: "Snel duidelijkheid",
+        title: "Wilt u weten wat er mogelijk is met uw woning?",
+        description:
+          "Meld de woning vrijblijvend aan. We bekijken eerst of de situatie aansluit bij HaagVast.",
+      },
+    },
+  },
+
+  {
+    slug: "huis-verkopen-zonder-makelaar",
+
+    seo: {
+      title: "Huis verkopen zonder makelaar",
+      description:
+        "Uw huis verkopen zonder makelaar? Lees hoe rechtstreekse verkoop werkt en wanneer een alternatief verkooptraject interessant kan zijn.",
+    },
+
+    data: {
+      hero: {
+        eyebrow: "Rechtstreeks verkopen",
+        title: "Uw huis verkopen zonder traditioneel makelaarstraject",
+        description:
+          "Een makelaar kan waardevol zijn bij verkoop op de vrije markt, maar het is niet de enige manier om een woning te verkopen. HaagVast bespreekt rechtstreeks met eigenaren of een andere route past.",
+        benefits: [
+          {
+            label: "Rechtstreeks contact",
+          },
+          {
+            label: "Geen openbare bezichtigingsronde nodig",
+          },
+          {
+            label: "Ook woningen met werk",
+          },
+          {
+            label: "Vrijblijvend starten",
+          },
+        ],
+        leadFormTitle: "Woning rechtstreeks aanmelden",
+        leadFormDescription:
+          "Vul uw postcode en huisnummer in om te laten bekijken of rechtstreekse verkoop een mogelijkheid is.",
+        leadSource: "service-zonder-makelaar",
+      },
+
+      benefits: {
+        eyebrow: "Alternatief traject",
+        title: "Wanneer verkopen zonder makelaar interessant kan zijn",
+        description: "Niet iedere verkoper wil dezelfde route volgen.",
+        items: [
+          {
+            icon: "message",
+            title: "Direct contact met de koper",
+            description:
+              "U bespreekt de woning zonder verkoopmakelaar als tussenpartij.",
+          },
+          {
+            icon: "wallet",
+            title: "Andere kostenstructuur",
+            description:
+              "Bij rechtstreekse verkoop ziet het verkoopproces en daarmee de kostenstructuur anders uit dan bij openbare verkoop via een makelaar.",
+          },
+          {
+            icon: "hammer",
+            title: "Niet eerst verkoopklaar maken",
+            description:
+              "Bij een gedateerde woning hoeft u niet automatisch te investeren in styling of renovatie.",
+          },
+          {
+            icon: "key",
+            title: "Afspraken direct afstemmen",
+            description:
+              "Voorwaarden en planning worden rechtstreeks besproken.",
+          },
+        ],
+      },
+
+      process: {
+        eyebrow: "Rechtstreekse verkoop",
+        title: "Hoe werkt verkopen zonder verkoopmakelaar?",
+        steps: [
+          {
+            icon: "house",
+            title: "Woning aanmelden",
+            description: "U geeft de basisgegevens van uw woning door.",
+          },
+          {
+            icon: "message",
+            title: "Direct contact",
+            description: "We bespreken uw situatie en de woning rechtstreeks.",
+          },
+          {
+            icon: "clipboard",
+            title: "Beoordeling",
+            description: "De woning en beschikbare informatie worden bekeken.",
+          },
+          {
+            icon: "check",
+            title: "Afspraken vastleggen",
+            description:
+              "Als partijen overeenstemming bereiken, worden de afspraken juridisch correct vastgelegd.",
+          },
+        ],
+      },
+
+      contentSections: [
+        {
+          eyebrow: "Belangrijk verschil",
+          title:
+            "Geen makelaar betekent niet zonder notaris of juridische afspraken",
+          description:
+            "Een woning rechtstreeks verkopen is iets anders dan informeel een huis overdragen.",
+          content: (
+            <>
+              <p>
+                Voor de overdracht van een woning blijft een notaris nodig. Ook
+                moeten afspraken over prijs, ontbindende voorwaarden,
+                overdrachtsdatum en andere zaken duidelijk worden vastgelegd.
+              </p>
+
+              <p>
+                Het verschil zit vooral in het verkooptraject vÃ³Ã³r die
+                juridische overdracht.
+              </p>
+            </>
+          ),
+        },
+
+        {
+          eyebrow: "Traditioneel of rechtstreeks",
+          title: "Welke verkooproute past het beste?",
+          description:
+            "Een openbare verkoop kan interessant zijn wanneer u maximale marktwerking wilt. Rechtstreekse verkoop kan juist aantrekkelijk zijn wanneer eenvoud, snelheid of de staat van de woning zwaarder wegen.",
+          content: (
+            <>
+              <p>
+                Er is daarom niet Ã©Ã©n route die in iedere situatie het beste is.
+              </p>
+
+              <p>
+                HaagVast probeert niet te doen alsof een makelaar altijd
+                overbodig is. Het doel is juist om een alternatief te bieden
+                wanneer dat beter past bij uw omstandigheden.
+              </p>
+            </>
+          ),
+          reversed: true,
+          muted: true,
+        },
+      ],
+
+      faq: {
+        eyebrow: "Veelgestelde vragen",
+        title: "Veelgestelde vragen over verkopen zonder makelaar",
+        items: [
+          {
+            question: "Mag ik mijn huis zonder makelaar verkopen?",
+            answer: (
+              <p>
+                Ja. Een verkoopmakelaar is niet verplicht. Voor de juridische
+                eigendomsoverdracht is wel een notaris nodig.
+              </p>
+            ),
+          },
+          {
+            question: "Heb ik dan helemaal geen verkoopkosten?",
+            answer: (
+              <p>
+                Niet per definitie. Denk bijvoorbeeld aan notariskosten,
+                eventuele juridische of administratieve kosten en kosten die
+                voortkomen uit uw eigen situatie.
+              </p>
+            ),
+          },
+          {
+            question: "Kan ik mijn woning rechtstreeks aan HaagVast verkopen?",
+            answer: (
+              <p>
+                U kunt de woning vrijblijvend aanmelden. Daarna wordt eerst
+                bekeken of de woning en situatie aansluiten bij HaagVast.
+              </p>
+            ),
+          },
+          {
+            question: "Moet ik zelf een koopcontract opstellen?",
+            answer: (
+              <p>
+                Bij een serieuze verkoop moeten afspraken juridisch correct
+                worden vastgelegd. Welke partij welk onderdeel verzorgt, wordt
+                vooraf duidelijk besproken.
+              </p>
+            ),
+          },
+        ],
+      },
+
+      relatedContent: {
+        title: "Verder lezen",
+        items: [
+          {
+            icon: "service",
+            title: "Huis snel verkopen",
+            description:
+              "Wanneer vooral snel duidelijkheid krijgen belangrijk is.",
+            href: "/huis-snel-verkopen",
+          },
+          {
+            icon: "service",
+            title: "Kluswoning verkopen",
+            description: "Voor woningen die nog niet verkoopklaar zijn.",
+            href: "/kluswoning-verkopen",
+          },
+          {
+            icon: "article",
+            title: "Kennisbank",
+            description: "Lees meer praktische uitleg over woningverkoop.",
+            href: "/kennisbank",
+          },
+        ],
+      },
+    },
+  },
+
+  {
+    slug: "kluswoning-verkopen",
+
+    seo: {
+      title: "Kluswoning verkopen in Haaglanden",
+      description:
+        "Een kluswoning verkopen zonder eerst volledig te renoveren? HaagVast bekijkt woningen met achterstallig onderhoud, oude keuken, badkamer of installaties.",
+    },
+
+    data: {
+      hero: {
+        eyebrow: "Kluswoning verkopen",
+        title: "Uw kluswoning verkopen zonder eerst alles te verbouwen",
+        description:
+          "Een oude keuken, gedateerde badkamer, slechte afwerking of verduurzamingsopgave hoeft niet te betekenen dat u eerst tienduizenden euro's moet investeren.",
+        benefits: [
+          {
+            label: "Oude keuken is geen probleem",
+          },
+          {
+            label: "Badkamer mag gedateerd zijn",
+          },
+          {
+            label: "Ook slecht energielabel",
+          },
+          {
+            label: "Vrijblijvend beoordelen",
+          },
+        ],
+        leadFormTitle: "Kluswoning aanmelden",
+        leadFormDescription:
+          "Geef het adres door. Daarna bespreken we welke werkzaamheden nodig zijn en of de woning bij HaagVast past.",
+        leadSource: "service-kluswoning",
+      },
+
+      benefits: {
+        eyebrow: "Verkopen in huidige staat",
+        title: "Waarom eerst renoveren niet altijd nodig is",
+        description:
+          "Verbouwen kan waarde toevoegen, maar brengt ook kosten, planning en risico met zich mee.",
+        items: [
+          {
+            icon: "hammer",
+            title: "Renovatie mag nog nodig zijn",
+            description:
+              "Keuken, badkamer, toilet of afwerking hoeven niet modern te zijn.",
+          },
+          {
+            icon: "wrench",
+            title: "Technische werkzaamheden",
+            description:
+              "Ook oude installaties, glas of verwarming kunnen onderdeel zijn van het renovatieplan.",
+          },
+          {
+            icon: "wallet",
+            title: "Geen grote voorinvestering",
+            description:
+              "U hoeft niet automatisch eerst zelf veel geld in de woning te steken.",
+          },
+          {
+            icon: "message",
+            title: "Situatie direct bespreken",
+            description:
+              "We kijken naar de woning zoals deze nu is en bespreken wat ermee moet gebeuren.",
+          },
+        ],
+      },
+
+      process: {
+        eyebrow: "Aanpak",
+        title: "Zo beoordelen we een kluswoning",
+        steps: [
+          {
+            icon: "house",
+            title: "Woning aanmelden",
+            description:
+              "U geeft het adres en de belangrijkste basisinformatie door.",
+          },
+          {
+            icon: "message",
+            title: "Werkzaamheden bespreken",
+            description:
+              "We bespreken wat verouderd is en welke problemen bekend zijn.",
+          },
+          {
+            icon: "clipboard",
+            title: "Renovatie inschatten",
+            description:
+              "We kijken naar kosten, mogelijkheden en de waarde na modernisering.",
+          },
+          {
+            icon: "check",
+            title: "Mogelijkheden bepalen",
+            description:
+              "Daarna bespreken we of rechtstreekse verkoop interessant kan zijn.",
+          },
+        ],
+      },
+
+      contentSections: [
+        {
+          eyebrow: "Renovatie",
+          title: "Welke werkzaamheden zijn geen directe dealbreaker?",
+          description:
+            "Veel cosmetische en technische werkzaamheden kunnen onderdeel zijn van een renovatie.",
+          content: (
+            <ul>
+              <li>Verouderde keuken</li>
+              <li>Oude badkamer of toilet</li>
+              <li>Versleten vloer</li>
+              <li>Stuc- en schilderwerk</li>
+              <li>Oude radiatoren of gaskachels</li>
+              <li>Enkel of oud dubbel glas</li>
+              <li>Slecht energielabel</li>
+              <li>Verouderde elektra</li>
+              <li>Gedateerde binnendeuren en afwerking</li>
+            </ul>
+          ),
+        },
+
+        {
+          eyebrow: "Eerst rekenen",
+          title: "Verbouwen of verkopen zoals de woning is?",
+          description:
+            "De belangrijkste vraag is niet alleen hoeveel waarde een verbouwing toevoegt, maar ook hoeveel tijd, risico en geld u zelf moet investeren.",
+          content: (
+            <>
+              <p>
+                Een renovatie van keuken, badkamer, verwarming, glas en
+                afwerking kan snel oplopen tot tienduizenden euro's.
+              </p>
+
+              <p>
+                Wanneer u die investering vooral zou doen om daarna meteen te
+                verkopen, is het verstandig eerst te vergelijken wat verkoop in
+                de huidige staat oplevert.
+              </p>
+            </>
+          ),
+          reversed: true,
+          muted: true,
+        },
+
+        {
+          eyebrow: "Energielabel",
+          title: "Ook een woning met label E, F of G kan interessant zijn",
+          description:
+            "Een laag energielabel betekent meestal dat er werk nodig is, maar het maakt een woning niet automatisch onaantrekkelijk.",
+          content: (
+            <>
+              <p>
+                Bij oudere woningen kunnen bijvoorbeeld HR++ glas, isolatie en
+                een modern verwarmingssysteem veel verschil maken.
+              </p>
+
+              <p>
+                HaagVast kijkt daarom naar de huidige situatie Ã©n het
+                verbeterpotentieel.
+              </p>
+            </>
+          ),
+        },
+      ],
+
+      propertyTypes: {
+        eyebrow: "Kluswoningen",
+        title: "Verschillende soorten renovatiewoningen",
+        items: [
+          {
+            icon: "apartment",
+            title: "Gedateerd appartement",
+            description:
+              "Bijvoorbeeld een appartement met oude keuken, badkamer en vloer.",
+          },
+          {
+            icon: "home",
+            title: "Oude eengezinswoning",
+            description:
+              "Een woning waar meerdere ruimtes en installaties aangepakt moeten worden.",
+          },
+          {
+            icon: "hammer",
+            title: "Volledige renovatie",
+            description:
+              "Woningen waar vrijwel de hele binnenzijde gemoderniseerd moet worden.",
+          },
+          {
+            icon: "wrench",
+            title: "Technisch gedateerd",
+            description:
+              "Bijvoorbeeld oude verwarming, elektra, beglazing of isolatie.",
+          },
+        ],
+      },
+
+      faq: {
+        eyebrow: "Veelgestelde vragen",
+        title: "Veelgestelde vragen over een kluswoning verkopen",
+        items: [
+          {
+            question: "Moet ik mijn keuken vervangen voordat ik verkoop?",
+            answer: (
+              <p>
+                Nee. Een oude keuken kan juist onderdeel zijn van een nieuwe
+                renovatie door de volgende eigenaar.
+              </p>
+            ),
+          },
+          {
+            question: "Wat als mijn badkamer volledig gedateerd is?",
+            answer: (
+              <p>
+                Dat hoeft geen probleem te zijn. De renovatiekosten worden
+                meegenomen in de totale beoordeling van de woning.
+              </p>
+            ),
+          },
+          {
+            question: "Koopt HaagVast woningen met een slecht energielabel?",
+            answer: (
+              <p>
+                Een laag energielabel sluit een woning niet automatisch uit. Het
+                verbeterpotentieel speelt mee in de beoordeling.
+              </p>
+            ),
+          },
+          {
+            question: "Is het slim om toch eerst zelf te verbouwen?",
+            answer: (
+              <p>
+                Dat hangt af van de renovatiekosten, mogelijke meerwaarde, uw
+                beschikbare tijd en uw gewenste verkoopstrategie. Het kan
+                verstandig zijn beide scenario's eerst naast elkaar te zetten.
+              </p>
+            ),
+          },
+        ],
+      },
+
+      relatedContent: {
+        title: "Meer over dit onderwerp",
+        items: [
+          {
+            icon: "article",
+            title: "Woning verkopen met slecht energielabel",
+            description:
+              "Meer over woningen die nog verduurzaamd moeten worden.",
+            href: "/kennisbank/woning-verkopen-met-slecht-energielabel",
+          },
+          {
+            icon: "service",
+            title: "Huis snel verkopen",
+            description:
+              "Wanneer u niet eerst maanden wilt verbouwen en verkopen.",
+            href: "/huis-snel-verkopen",
+          },
+          {
+            icon: "region",
+            title: "Woning verkopen in Leidschendam",
+            description: "Lokale informatie voor woningen in Leidschendam.",
+            href: "/regio/leidschendam",
+          },
+        ],
+      },
+
+      finalCta: {
+        eyebrow: "Uw kluswoning",
+        title: "Eerst weten wat mogelijk is voordat u gaat verbouwen?",
+        description:
+          "Meld de woning vrijblijvend aan. Dan kunt u verkoop in de huidige staat vergelijken met zelf renoveren.",
+      },
+    },
+  },
+
+  {
+    slug: "verhuurde-woning-verkopen",
+
+    seo: {
+      title: "Verhuurde woning verkopen",
+      description:
+        "Een verhuurde woning verkopen? HaagVast bekijkt per situatie welke mogelijkheden er zijn voor verhuurd vastgoed in regio Haaglanden.",
+    },
+
+    data: {
+      hero: {
+        eyebrow: "Verhuurde woning",
+        title: "Een verhuurde woning verkopen vraagt om een andere beoordeling",
+        description:
+          "Bij verhuurd vastgoed spelen huurvoorwaarden, rechten van huurders en de feitelijke situatie een belangrijke rol. HaagVast kijkt per woning wat mogelijk is.",
+        benefits: [
+          {
+            label: "Situatie per woning beoordelen",
+          },
+          {
+            label: "Rechtstreeks contact",
+          },
+          {
+            label: "Haaglanden als focus",
+          },
+          {
+            label: "Vrijblijvend aanmelden",
+          },
+        ],
+        leadFormTitle: "Verhuurde woning aanmelden",
+        leadFormDescription:
+          "Geef het adres door. Daarna bespreken we de verhuursituatie en relevante voorwaarden.",
+        leadSource: "service-verhuurde-woning",
+      },
+
+      benefits: {
+        title: "Meer dan alleen de stenen",
+        description:
+          "Bij verhuurde woningen is de huursituatie onderdeel van de waarde en verkoopmogelijkheden.",
+        items: [
+          {
+            icon: "house",
+            title: "Woning bekijken",
+            description:
+              "Ligging, woningtype en technische staat blijven belangrijke factoren.",
+          },
+          {
+            icon: "message",
+            title: "Huurgegevens bespreken",
+            description:
+              "De bestaande huurovereenkomst en feitelijke situatie moeten duidelijk zijn.",
+          },
+          {
+            icon: "wallet",
+            title: "Opbrengst meenemen",
+            description:
+              "Huurinkomsten en voorwaarden kunnen relevant zijn voor de beoordeling.",
+          },
+          {
+            icon: "check",
+            title: "Geen standaardantwoord",
+            description:
+              "Iedere verhuurde woning vraagt om een eigen juridische en financiÃ«le beoordeling.",
+          },
+        ],
+      },
+
+      process: {
+        title: "Zo starten we",
+        steps: [
+          {
+            icon: "house",
+            title: "Adres doorgeven",
+            description: "Meld de woning aan via het formulier.",
+          },
+          {
+            icon: "message",
+            title: "Huur bespreken",
+            description:
+              "We bespreken de huurder, overeenkomst en actuele situatie.",
+          },
+          {
+            icon: "clipboard",
+            title: "Gegevens beoordelen",
+            description:
+              "Woning- en huurdocumentatie worden in samenhang bekeken.",
+          },
+          {
+            icon: "check",
+            title: "Mogelijkheden bespreken",
+            description: "Daarna bepalen we of verdere gesprekken zinvol zijn.",
+          },
+        ],
+      },
+
+      contentSections: [
+        {
+          eyebrow: "Belangrijk",
+          title: "Een verhuurde woning verkopen is juridisch anders",
+          content: (
+            <>
+              <p>
+                Het bestaan van een huurovereenkomst kan gevolgen hebben voor
+                wat een koper met de woning kan doen.
+              </p>
+
+              <p>
+                Daarom is het belangrijk om geen aannames te doen over
+                beÃ«indiging van huur of beschikbaarheid van de woning. De
+                concrete overeenkomst en omstandigheden moeten worden bekeken.
+              </p>
+            </>
+          ),
+        },
+      ],
+
+      faq: {
+        title: "Veelgestelde vragen over verhuurde woningen",
+        items: [
+          {
+            question:
+              "Kan ik een woning verkopen terwijl er een huurder in zit?",
+            answer: (
+              <p>
+                Dat kan in bepaalde situaties, maar de bestaande huurpositie en
+                rechten van de huurder blijven relevant. De concrete situatie
+                moet juridisch correct worden beoordeeld.
+              </p>
+            ),
+          },
+          {
+            question: "Moet de huurder eerst vertrekken?",
+            answer: (
+              <p>
+                Niet automatisch. Of en wanneer een huurovereenkomst kan
+                eindigen hangt af van de overeenkomst en wettelijke regels.
+              </p>
+            ),
+          },
+          {
+            question: "Kan ik de woning eerst vrijblijvend aanmelden?",
+            answer: (
+              <p>
+                Ja. We bespreken eerst de basisinformatie en bepalen daarna of
+                verdere beoordeling zinvol is.
+              </p>
+            ),
+          },
+        ],
+      },
+
+      relatedContent: {
+        title: "Meer informatie",
+        items: [
+          {
+            icon: "service",
+            title: "Huis verkopen zonder makelaar",
+            description: "Meer over rechtstreekse verkoop.",
+            href: "/huis-verkopen-zonder-makelaar",
+          },
+          {
+            icon: "region",
+            title: "Woning verkopen in Den Haag",
+            description: "Lokale informatie voor Den Haag.",
+            href: "/regio/den-haag",
+          },
+          {
+            icon: "article",
+            title: "Kennisbank",
+            description: "Lees meer over verschillende verkoopsituaties.",
+            href: "/kennisbank",
+          },
+        ],
+      },
+    },
+  },
+
+  {
+    slug: "geerfde-woning-verkopen",
+
+    seo: {
+      title: "GeÃ«rfde woning verkopen",
+      description:
+        "Een geÃ«rfde woning verkopen? Lees welke aandachtspunten spelen bij nalatenschap, eigendom en verkoop van een woning in regio Haaglanden.",
+    },
+
+    data: {
+      hero: {
+        eyebrow: "Nalatenschap",
+        title: "Een geÃ«rfde woning verkopen zonder onnodig ingewikkeld traject",
+        description:
+          "Bij een woning uit een nalatenschap spelen vaak meerdere praktische en juridische zaken tegelijk. HaagVast kan eerst vrijblijvend naar de woning en situatie kijken.",
+        benefits: [
+          {
+            label: "Situatie rustig bespreken",
+          },
+          {
+            label: "Ook gedateerde woningen",
+          },
+          {
+            label: "Rechtstreeks contact",
+          },
+          {
+            label: "Vrijblijvend beoordelen",
+          },
+        ],
+        leadFormTitle: "GeÃ«rfde woning aanmelden",
+        leadFormDescription:
+          "Geef het adres door. Daarna bespreken we kort de woning en de situatie rond de nalatenschap.",
+        leadSource: "service-geerfde-woning",
+      },
+
+      benefits: {
+        title: "Bij een nalatenschap komt vaak meer kijken dan alleen verkoop",
+        items: [
+          {
+            icon: "message",
+            title: "Persoonlijk bespreken",
+            description:
+              "De situatie kan gevoelig of complex zijn en verdient duidelijke communicatie.",
+          },
+          {
+            icon: "house",
+            title: "Woning in huidige staat",
+            description:
+              "Een woning hoeft niet eerst volledig leeg, opgeknapt of gemoderniseerd te zijn om te worden besproken.",
+          },
+          {
+            icon: "key",
+            title: "Planning afstemmen",
+            description:
+              "De gewenste verkoop- en overdrachtsplanning kan worden besproken.",
+          },
+          {
+            icon: "check",
+            title: "Eerst duidelijkheid",
+            description:
+              "Een vrijblijvende beoordeling kan helpen voordat u verdere kosten maakt.",
+          },
+        ],
+      },
+
+      process: {
+        title: "Zo begint het proces",
+        steps: [
+          {
+            icon: "house",
+            title: "Woning aanmelden",
+            description: "Geef het adres en uw contactgegevens door.",
+          },
+          {
+            icon: "message",
+            title: "Situatie toelichten",
+            description:
+              "We bespreken wie betrokken zijn en wat uw belangrijkste vragen zijn.",
+          },
+          {
+            icon: "clipboard",
+            title: "Woning beoordelen",
+            description:
+              "We kijken naar de woning, eigendomssituatie en beschikbare informatie.",
+          },
+          {
+            icon: "check",
+            title: "Vervolg bespreken",
+            description:
+              "Daarna kan worden bepaald welke vervolgstappen logisch zijn.",
+          },
+        ],
+      },
+
+      contentSections: [
+        {
+          eyebrow: "Nalatenschap",
+          title: "Controleer eerst wie bevoegd is om te verkopen",
+          description:
+            "Bij een geÃ«rfde woning is het belangrijk dat duidelijk is wie juridisch eigenaar is en wie namens de nalatenschap mag handelen.",
+          content: (
+            <>
+              <p>
+                Afhankelijk van de situatie kunnen een verklaring van erfrecht,
+                testament of andere stukken nodig zijn.
+              </p>
+
+              <p>
+                Wanneer meerdere erfgenamen betrokken zijn, moeten afspraken
+                over verkoop doorgaans goed worden afgestemd.
+              </p>
+            </>
+          ),
+        },
+
+        {
+          eyebrow: "Woningstaat",
+          title:
+            "Een woning uit een nalatenschap is vaak nog niet verkoopklaar",
+          content: (
+            <>
+              <p>
+                Het komt regelmatig voor dat een geÃ«rfde woning gedateerd is of
+                nog moet worden leeggeruimd.
+              </p>
+
+              <p>
+                Dat betekent niet automatisch dat u eerst keuken, badkamer,
+                vloer of complete afwerking moet moderniseren.
+              </p>
+            </>
+          ),
+          muted: true,
+          reversed: true,
+        },
+      ],
+
+      faq: {
+        title: "Veelgestelde vragen over een geÃ«rfde woning",
+        items: [
+          {
+            question: "Moet een geÃ«rfde woning eerst leeg zijn?",
+            answer: (
+              <p>
+                Niet noodzakelijk voor een eerste beoordeling. Voor een
+                uiteindelijke verkoop moeten wel duidelijke afspraken worden
+                gemaakt over wat achterblijft en wat wordt verwijderd.
+              </p>
+            ),
+          },
+          {
+            question: "Kunnen meerdere erfgenamen samen verkopen?",
+            answer: (
+              <p>
+                Dat kan, maar de juridische bevoegdheid en instemming van de
+                betrokken partijen moeten correct geregeld zijn.
+              </p>
+            ),
+          },
+          {
+            question: "Kan een sterk gedateerde woning worden aangemeld?",
+            answer: (
+              <p>
+                Ja. Juist een woning waar renovatie nodig is kan interessant
+                zijn om in de huidige staat te laten beoordelen.
+              </p>
+            ),
+          },
+        ],
+      },
+
+      relatedContent: {
+        title: "Meer relevante pagina's",
+        items: [
+          {
+            icon: "service",
+            title: "Kluswoning verkopen",
+            description:
+              "Voor woningen waar nog veel moderniseringswerk nodig is.",
+            href: "/kluswoning-verkopen",
+          },
+          {
+            icon: "service",
+            title: "Huis snel verkopen",
+            description:
+              "Wanneer u vooral snel duidelijkheid wilt over de mogelijkheden.",
+            href: "/huis-snel-verkopen",
+          },
+          {
+            icon: "article",
+            title: "Kennisbank",
+            description:
+              "Praktische uitleg over woningverkoop en bijzondere situaties.",
+            href: "/kennisbank",
+          },
+        ],
+      },
+    },
+  },
+];
+
+export function getServicePageBySlug(slug: string): ServicePage | undefined {
+  return servicePages.find((page) => page.slug === slug);
+}
+

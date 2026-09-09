@@ -39,3 +39,15 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+/reports/site-audit.md
+
+/reports/site-audit.json
+
+.azure-haagvast.local.json
+
+.env
+.env.local
+.azure-haagvast.local.json
+.next/
+node_modules/

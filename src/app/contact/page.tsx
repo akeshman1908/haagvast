@@ -1,0 +1,363 @@
+﻿import type { Metadata } from "next";
+import Link from "next/link";
+import { CheckCircle2 } from "lucide-react";
+
+import QuickLeadForm from "@/components/forms/QuickLeadForm/QuickLeadForm";
+import Faq from "@/components/sections/Faq/Faq";
+import FinalCta from "@/components/sections/FinalCta/FinalCta";
+import Process from "@/components/sections/Process/Process";
+import TrustBar from "@/components/sections/TrustBar/TrustBar";
+
+import "./ContactPage.scss";
+
+export const metadata: Metadata = {
+  title: "Contact met HaagVast | Haaglanden",
+  description:
+    "Meld uw woning vrijblijvend aan bij HaagVast. Start met postcode en huisnummer. Geen professionele foto's of verkoopbrochure nodig.",
+};
+
+export default function ContactPage() {
+  return (
+    <main className="contact-page">
+      <section className="contact-intro">
+        <div className="container">
+          <div className="contact-intro__layout">
+            <div className="contact-intro__content">
+              <span className="eyebrow contact-intro__eyebrow">
+                Woning aanmelden
+              </span>
+
+              <h1 className="contact-intro__title">
+                Vertel ons alleen even
+                <span> om welke woning het gaat.</span>
+              </h1>
+
+              <p className="contact-intro__description">
+                U hoeft geen verkoopdossier samen te stellen en ook geen
+                professionele foto&apos;s te laten maken. Begin met postcode en
+                huisnummer. Daarna vragen we alleen de gegevens die nodig zijn
+                om contact met u op te nemen.
+              </p>
+
+              <div className="contact-intro__divider" />
+
+              <span className="contact-intro__benefits-label">
+                Voor de eerste aanmelding heeft u niet nodig
+              </span>
+
+              <ul className="contact-intro__benefits">
+                <li>
+                  <CheckCircle2
+                    size={18}
+                    strokeWidth={1.8}
+                    aria-hidden="true"
+                  />
+                  <span>Geen professionele woningfoto&apos;s</span>
+                </li>
+
+                <li>
+                  <CheckCircle2
+                    size={18}
+                    strokeWidth={1.8}
+                    aria-hidden="true"
+                  />
+                  <span>Geen verkoopbrochure</span>
+                </li>
+
+                <li>
+                  <CheckCircle2
+                    size={18}
+                    strokeWidth={1.8}
+                    aria-hidden="true"
+                  />
+                  <span>Geen taxatierapport</span>
+                </li>
+
+                <li>
+                  <CheckCircle2
+                    size={18}
+                    strokeWidth={1.8}
+                    aria-hidden="true"
+                  />
+                  <span>Geen woning die al verkoopklaar is</span>
+                </li>
+              </ul>
+
+              <p className="contact-intro__reassurance">
+                De eerste aanmelding is vrijblijvend. U beslist pas na het
+                bespreken van de mogelijkheden of u verder wilt.
+              </p>
+            </div>
+
+            <div
+              id="woning-aanmelden"
+              className="contact-intro__form"
+            >
+              <div className="contact-intro__form-kicker">
+                <span>Stap 1 van uw aanmelding</span>
+                <span>± 1 minuut</span>
+              </div>
+
+              <QuickLeadForm
+                title="Meld uw woning vrijblijvend aan"
+                description="Start met postcode en huisnummer. Meer hebben we nu nog niet nodig."
+                source="contact-page"
+              />
+
+              <p className="contact-intro__form-note">
+                Uw gegevens worden gebruikt om uw woningaanmelding te
+                beoordelen en contact met u op te nemen.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <TrustBar
+        items={[
+          {
+            label: "Vrijblijvend aanmelden",
+            icon: "check",
+          },
+          {
+            label: "Geen foto's nodig",
+            icon: "house",
+          },
+          {
+            label: "Rechtstreeks contact",
+            icon: "handshake",
+          },
+          {
+            label: "Ook woningen met werk",
+            icon: "clock",
+          },
+        ]}
+      />
+
+      <Process
+        eyebrow="Na uw aanmelding"
+        title="Wat gebeurt er daarna?"
+        description="U hoeft na het formulier niet direct allerlei documenten aan te leveren. We beginnen met uw woning en uw situatie."
+        steps={[
+          {
+            icon: "clipboard",
+            title: "Wij bekijken uw aanmelding",
+            description:
+              "We bekijken het adres en de informatie die u heeft ingevuld.",
+          },
+          {
+            icon: "message",
+            title: "We nemen contact op",
+            description:
+              "We bespreken waarom u wilt verkopen, de woning en uw gewenste planning.",
+          },
+          {
+            icon: "house",
+            title: "We beoordelen de situatie",
+            description:
+              "Als het zinvol is om verder te kijken, bespreken we hoe we de woning kunnen beoordelen.",
+          },
+          {
+            icon: "check",
+            title: "U beslist zelf",
+            description:
+              "Na het bespreken van de mogelijkheden bepaalt u zelf of u verder wilt met HaagVast.",
+          },
+        ]}
+      />
+
+      <section className="contact-expectations section">
+        <div className="container">
+          <div className="contact-expectations__header">
+            <div>
+              <span className="eyebrow contact-expectations__eyebrow">
+                Zo eenvoudig mogelijk
+              </span>
+
+              <h2 className="heading-2 contact-expectations__title">
+                Eerst contact. De rest komt later.
+              </h2>
+            </div>
+
+            <p className="contact-expectations__description">
+              Een eerste aanmelding is geen verkoopdossier. We willen eerst
+              weten om welke woning het gaat en wat voor u belangrijk is.
+            </p>
+          </div>
+
+          <div className="contact-expectations__grid">
+            <article className="contact-expectations__column">
+              <span className="contact-expectations__column-number">
+                01
+              </span>
+
+              <h3>Wat we nu vragen</h3>
+
+              <ul>
+                <li>
+                  <CheckCircle2
+                    size={17}
+                    strokeWidth={1.8}
+                    aria-hidden="true"
+                  />
+                  <span>Postcode</span>
+                </li>
+
+                <li>
+                  <CheckCircle2
+                    size={17}
+                    strokeWidth={1.8}
+                    aria-hidden="true"
+                  />
+                  <span>Huisnummer</span>
+                </li>
+
+                <li>
+                  <CheckCircle2
+                    size={17}
+                    strokeWidth={1.8}
+                    aria-hidden="true"
+                  />
+                  <span>Uw naam</span>
+                </li>
+
+                <li>
+                  <CheckCircle2
+                    size={17}
+                    strokeWidth={1.8}
+                    aria-hidden="true"
+                  />
+                  <span>Contactgegevens</span>
+                </li>
+
+                <li>
+                  <CheckCircle2
+                    size={17}
+                    strokeWidth={1.8}
+                    aria-hidden="true"
+                  />
+                  <span>Eventueel een korte toelichting</span>
+                </li>
+              </ul>
+            </article>
+
+            <article className="contact-expectations__column">
+              <span className="contact-expectations__column-number">
+                02
+              </span>
+
+              <h3>Wat we nu niet vragen</h3>
+
+              <ul>
+                <li>
+                  <CheckCircle2
+                    size={17}
+                    strokeWidth={1.8}
+                    aria-hidden="true"
+                  />
+                  <span>Professionele foto&apos;s</span>
+                </li>
+
+                <li>
+                  <CheckCircle2
+                    size={17}
+                    strokeWidth={1.8}
+                    aria-hidden="true"
+                  />
+                  <span>Complete verkoopbrochure</span>
+                </li>
+
+                <li>
+                  <CheckCircle2
+                    size={17}
+                    strokeWidth={1.8}
+                    aria-hidden="true"
+                  />
+                  <span>Bouwkundige rapporten</span>
+                </li>
+
+                <li>
+                  <CheckCircle2
+                    size={17}
+                    strokeWidth={1.8}
+                    aria-hidden="true"
+                  />
+                  <span>Een woning die al opgeknapt is</span>
+                </li>
+
+                <li>
+                  <CheckCircle2
+                    size={17}
+                    strokeWidth={1.8}
+                    aria-hidden="true"
+                  />
+                  <span>Een beslissing om direct te verkopen</span>
+                </li>
+              </ul>
+            </article>
+          </div>
+
+          <div className="contact-expectations__footer">
+            <p>
+              Heeft u later documenten die relevant zijn voor de woning? Dan
+              bespreken we vanzelf welke informatie daadwerkelijk nodig is.
+            </p>
+
+            <Link href="/werkwijze">
+              Bekijk de volledige werkwijze
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <Faq
+        eyebrow="Voor u begint"
+        title="Vragen over het aanmelden"
+        description="Dit is wat u moet weten voordat u het formulier invult."
+        items={[
+          {
+            question: "Zit ik na mijn aanmelding ergens aan vast?",
+            answer:
+              "Nee. De eerste aanmelding is vrijblijvend. We gebruiken deze om te bekijken of verdere gesprekken over uw woning zinvol zijn.",
+          },
+          {
+            question: "Moet ik foto's meesturen?",
+            answer:
+              "Nee. Voor de eerste aanmelding zijn professionele foto's of een verkoopbrochure niet nodig.",
+          },
+          {
+            question: "Mijn woning moet flink worden opgeknapt. Kan ik die ook aanmelden?",
+            answer:
+              "Ja. Ook woningen met achterstallig onderhoud, een gedateerde afwerking of renovatiewerk kunnen worden besproken.",
+          },
+          {
+            question: "Moet ik al weten wanneer ik wil verhuizen?",
+            answer:
+              "Nee. Als u al een gewenste planning heeft kunt u die noemen, maar de overdrachtsdatum kan later worden besproken.",
+          },
+          {
+            question: "Heb ik eerst een makelaar nodig?",
+            answer:
+              "Nee. Voor een rechtstreekse aanmelding bij HaagVast hoeft u niet eerst een verkoopmakelaar in te schakelen.",
+          },
+          {
+            question: "Wat gebeurt er nadat ik het formulier heb verstuurd?",
+            answer:
+              "We bekijken uw aanmelding en nemen vervolgens contact met u op om de woning, uw situatie en eventuele vervolgstappen te bespreken.",
+          },
+        ]}
+      />
+
+      <FinalCta
+        eyebrow="Nog niet aangemeld?"
+        title="Begin alleen met het adres van uw woning"
+        description="Geen foto's, verkoopbrochure of compleet dossier nodig. Postcode en huisnummer zijn genoeg om te beginnen."
+        primaryLabel="Woning aanmelden"
+        primaryHref="#woning-aanmelden"
+        secondaryLabel="Eerst de werkwijze bekijken"
+        secondaryHref="/werkwijze"
+      />
+    </main>
+  );
+}
+

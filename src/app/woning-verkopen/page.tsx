@@ -1,0 +1,369 @@
+﻿import type { Metadata } from "next";
+
+import QuickLeadForm from "@/components/forms/QuickLeadForm/QuickLeadForm";
+import Benefits from "@/components/sections/Benefits/Benefits";
+import ContentSection from "@/components/sections/ContentSection/ContentSection";
+import Faq from "@/components/sections/Faq/Faq";
+import FinalCta from "@/components/sections/FinalCta/FinalCta";
+import Hero from "@/components/sections/Hero/Hero";
+import Process from "@/components/sections/Process/Process";
+import PropertyTypes from "@/components/sections/PropertyTypes/PropertyTypes";
+import RegionLinks from "@/components/sections/RegionLinks/RegionLinks";
+import RelatedContent from "@/components/sections/RelatedContent/RelatedContent";
+import TrustBar from "@/components/sections/TrustBar/TrustBar";
+
+import { siteConfig } from "@/config/site";
+import { regions } from "@/data/haagvast-regions";
+
+const canonicalUrl = `${siteConfig.url}/woning-verkopen`;
+
+export const metadata: Metadata = {
+  title: "Woning verkopen in Haaglanden | HaagVast",
+  description:
+    "Uw woning verkopen in Den Haag of Haaglanden? HaagVast bekijkt uw woning rechtstreeks en bespreekt vrijblijvend de mogelijkheden en gewenste planning.",
+  alternates: {
+    canonical: canonicalUrl,
+  },
+  openGraph: {
+    type: "website",
+    locale: siteConfig.locale,
+    siteName: siteConfig.name,
+    url: canonicalUrl,
+    title: "Woning verkopen in Haaglanden | HaagVast",
+    description:
+      "Bespreek vrijblijvend de mogelijkheden voor rechtstreekse verkoop van uw woning in Haaglanden.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
+export default function WoningVerkopenPage() {
+  const breadcrumbStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "HaagVast",
+        item: siteConfig.url,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Woning verkopen",
+        item: canonicalUrl,
+      },
+    ],
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbStructuredData).replace(
+            /</g,
+            "\\u003c",
+          ),
+        }}
+      />
+
+      <Hero
+        eyebrow="Woning verkopen"
+        title="Uw woning rechtstreeks verkopen in Haaglanden"
+        description="Wilt u uw woning verkopen en eerst weten welke mogelijkheden er zijn? HaagVast bekijkt woningen rechtstreeks van eigenaren in Haaglanden. Ook wanneer de woning gedateerd is, onderhoud nodig heeft of u vooral behoefte heeft aan een duidelijk en overzichtelijk verkooptraject."
+        benefits={[
+          {
+            label: "Vrijblijvend aanmelden",
+          },
+          {
+            label: "Rechtstreeks contact",
+          },
+          {
+            label: "Geen verkoopmakelaar verplicht",
+          },
+          {
+            label: "Planning bespreekbaar",
+          },
+        ]}
+        primaryCta={{
+          label: "Mijn woning aanmelden",
+          href: "/woning-aanmelden",
+        }}
+        secondaryCta={{
+          label: "Bekijk onze werkwijze",
+          href: "#werkwijze",
+        }}
+      >
+        <QuickLeadForm
+          title="Wilt u uw woning verkopen?"
+          description="Vul uw postcode en huisnummer in. Daarna bespreken we vrijblijvend de woning, uw situatie en wat voor u belangrijk is."
+          source="woning-verkopen"
+        />
+      </Hero>
+
+      <TrustBar
+        items={[
+          {
+            label: "Actief in heel Haaglanden",
+            icon: "house",
+          },
+          {
+            label: "Rechtstreeks contact",
+            icon: "handshake",
+          },
+          {
+            label: "Vrijblijvende beoordeling",
+            icon: "check",
+          },
+          {
+            label: "Planning bespreekbaar",
+            icon: "clock",
+          },
+        ]}
+      />
+
+      <ContentSection
+        eyebrow="Rechtstreeks verkopen"
+        title="Eerst bekijken wat verkoop in de huidige staat betekent"
+        description="Een woning verkopen hoeft niet automatisch te beginnen met verbouwen, styling, fotografie en een volledig verkooptraject."
+        content={
+          <>
+            <p>
+              Bij HaagVast kunt u uw woning eerst vrijblijvend aanmelden. We
+              bekijken de locatie, het woningtype, de staat van de woning en uw
+              gewenste planning.
+            </p>
+
+            <p>
+              Wanneer de woning aansluit, bespreken we rechtstreeks welke
+              mogelijkheden er zijn. U kunt daarna zelf bepalen of deze route
+              bij uw situatie past.
+            </p>
+
+            <p>
+              Ook woningen met achterstallig onderhoud, een gedateerde
+              afwerking, een minder gunstig energielabel of renovatiebehoefte
+              kunnen worden besproken.
+            </p>
+          </>
+        }
+        cta={{
+          label: "Lees hoe het werkt",
+          href: "/werkwijze",
+        }}
+      />
+
+      <Benefits
+        eyebrow="Waarom eerst HaagVast?"
+        title="Een verkooproute gericht op duidelijkheid en gemak"
+        description="Niet iedere eigenaar wil dezelfde verkooproute. Bij HaagVast kunt u eerst onderzoeken wat rechtstreekse verkoop voor uw woning betekent."
+        items={[
+          {
+            icon: "house",
+            title: "Verkopen in huidige staat",
+            description:
+              "U hoeft niet automatisch eerst te schilderen, moderniseren of uitgebreid verkoopklaar te maken.",
+          },
+          {
+            icon: "check",
+            title: "Vrijblijvend beoordelen",
+            description:
+              "Een eerste aanmelding is bedoeld om te kijken of uw woning en situatie aansluiten.",
+          },
+          {
+            icon: "check",
+            title: "Direct contact",
+            description:
+              "U bespreekt de woning en mogelijke vervolgstappen rechtstreeks zonder onnodige tussenlagen.",
+          },
+          {
+            icon: "check",
+            title: "Planning bespreken",
+            description:
+              "Uw gewenste verkoop- en overdrachtsplanning kan vanaf het begin worden meegenomen.",
+          },
+        ]}
+      />
+
+      <section id="werkwijze">
+        <Process
+          eyebrow="Werkwijze"
+          title="Van woning aanmelden naar mogelijke verkoop"
+          description="We houden de eerste stappen bewust eenvoudig en overzichtelijk."
+          steps={[
+            {
+              icon: "house",
+              title: "Woning aanmelden",
+              description:
+                "Vul uw adres en contactgegevens in zodat we de woning eerst globaal kunnen bekijken.",
+            },
+            {
+              icon: "message",
+              title: "Situatie bespreken",
+              description:
+                "We bespreken de woning, uw reden van verkoop en wat voor u belangrijk is.",
+            },
+            {
+              icon: "check",
+              title: "Woning beoordelen",
+              description:
+                "We kijken naar locatie, woningtype, onderhoudsstaat en de mogelijkheden van het object.",
+            },
+            {
+              icon: "check",
+              title: "Vervolg bespreken",
+              description:
+                "Wanneer de woning aansluit bespreken we mogelijke voorwaarden en vervolgstappen.",
+            },
+          ]}
+        />
+      </section>
+
+      <PropertyTypes
+        eyebrow="Verschillende situaties"
+        title="Welke woningen kunt u aanmelden?"
+        description="HaagVast kijkt niet alleen naar volledig afgewerkte woningen. Juist woningen waar nog werk aan zit kunnen interessant zijn."
+        items={[
+          {
+            icon: "apartment",
+            title: "Appartementen",
+            description:
+              "Appartementen en maisonnettes, inclusief woningen binnen een VvE.",
+          },
+          {
+            icon: "home",
+            title: "Eengezinswoningen",
+            description:
+              "Rijtjeswoningen, hoekwoningen en andere grondgebonden woningen.",
+          },
+          {
+            icon: "hammer",
+            title: "Kluswoningen",
+            description:
+              "Woningen waarbij keuken, badkamer of afwerking gemoderniseerd moet worden.",
+          },
+          {
+            icon: "wrench",
+            title: "Achterstallig onderhoud",
+            description:
+              "Woningen met technisch of cosmetisch onderhoud kunnen eveneens worden besproken.",
+          },
+          {
+            icon: "building",
+            title: "Gedateerde woningen",
+            description:
+              "Bijvoorbeeld oudere installaties, beglazing, afwerking of indeling.",
+          },
+          {
+            icon: "key",
+            title: "Leegstaande woningen",
+            description:
+              "Ook woningen die al leegstaan of binnenkort beschikbaar komen.",
+          },
+        ]}
+      />
+
+      <RegionLinks
+        eyebrow="Woning verkopen in Haaglanden"
+        title="Actief in heel Haaglanden en Voorschoten"
+        description="Bekijk de informatie voor uw eigen woonplaats of meld uw woning direct vrijblijvend aan."
+        items={regions.map((region) => ({
+          name: `Woning verkopen in ${region.name}`,
+          href: `/regio/${region.slug}`,
+          description: region.seoDescription,
+        }))}
+      />
+
+      <Faq
+        eyebrow="Veelgestelde vragen"
+        title="Veelgestelde vragen over uw woning verkopen"
+        description="De belangrijkste vragen over rechtstreeks verkopen via HaagVast."
+        items={[
+          {
+            question: "Is het aanmelden van mijn woning vrijblijvend?",
+            answer: (
+              <p>
+                Ja. Een eerste woningaanmelding is vrijblijvend en bedoeld om
+                te bekijken of uw woning en situatie bij HaagVast aansluiten.
+              </p>
+            ),
+          },
+          {
+            question: "Moet ik mijn woning eerst verbouwen?",
+            answer: (
+              <p>
+                Nee. U kunt de woning juist in de huidige staat aanmelden. Ook
+                gedateerde woningen en woningen met onderhoud of
+                renovatiebehoefte kunnen worden besproken.
+              </p>
+            ),
+          },
+          {
+            question: "Heb ik een verkoopmakelaar nodig?",
+            answer: (
+              <p>
+                Nee. Voor een eerste gesprek met HaagVast hoeft u geen
+                verkoopmakelaar te hebben ingeschakeld.
+              </p>
+            ),
+          },
+          {
+            question: "Kan ik mijn gewenste overdrachtsdatum aangeven?",
+            answer: (
+              <p>
+                Ja. Uw gewenste planning kan vanaf het begin worden besproken.
+                Definitieve afspraken worden uiteindelijk tussen koper en
+                verkoper vastgelegd.
+              </p>
+            ),
+          },
+        ]}
+      />
+
+      <RelatedContent
+        eyebrow="Meer informatie"
+        title="Bekijk ook deze verkoopmogelijkheden"
+        description="Lees verder over verschillende situaties waarin een rechtstreekse verkooproute interessant kan zijn."
+        items={[
+          {
+            type: "service",
+            title: "Huis snel verkopen",
+            description:
+              "Bekijk wat er mogelijk is wanneer snelheid en duidelijkheid belangrijk zijn.",
+            href: "/huis-snel-verkopen",
+          },
+          {
+            type: "service",
+            title: "Huis verkopen zonder makelaar",
+            description:
+              "Lees hoe rechtstreekse verkoop zonder traditionele verkoopmakelaar kan werken.",
+            href: "/huis-verkopen-zonder-makelaar",
+          },
+          {
+            type: "service",
+            title: "Kluswoning verkopen",
+            description:
+              "Bekijk de mogelijkheden wanneer uw woning eerst veel renovatie nodig zou hebben.",
+            href: "/kluswoning-verkopen",
+          },
+        ]}
+      />
+
+      <FinalCta
+        eyebrow="Vrijblijvend aanmelden"
+        title="Wilt u weten wat er met uw woning mogelijk is?"
+        description="Meld uw woning vrijblijvend aan. Daarna bespreken we de woning, uw situatie en gewenste planning."
+        primaryLabel="Mijn woning aanmelden"
+        primaryHref="/woning-aanmelden"
+        secondaryLabel="Neem contact op"
+        secondaryHref="/contact"
+      />
+    </>
+  );
+}
+
+

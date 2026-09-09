@@ -1,0 +1,546 @@
+﻿.werkwijze-page {
+  &__prose {
+    display: grid;
+    gap: var(--spacing-4);
+    max-width: 43rem;
+
+    p {
+      margin: 0;
+      color: var(--color-text-soft);
+      font-size: 0.94rem;
+      line-height: 1.85;
+    }
+  }
+
+  &__info-panel {
+    padding: var(--spacing-6);
+    border-top: 2px solid var(--color-accent-500);
+    border-right: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+    border-left: 1px solid var(--color-border);
+    background: var(--color-paper);
+  }
+
+  &__panel-label {
+    display: block;
+    margin-bottom: var(--spacing-5);
+    color: var(--color-accent-700);
+    font-size: 0.68rem;
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 0.12em;
+    line-height: 1.4;
+    text-transform: uppercase;
+  }
+
+  &__checklist {
+    display: grid;
+    gap: var(--spacing-4);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      display: grid;
+      grid-template-columns: 1.5rem minmax(0, 1fr);
+      gap: var(--spacing-3);
+      align-items: start;
+      color: var(--color-text);
+      font-size: 0.86rem;
+      line-height: 1.55;
+    }
+
+    svg {
+      margin-top: 0.08rem;
+      color: var(--color-primary-700);
+    }
+  }
+
+  &__panel-note {
+    margin: var(--spacing-5) 0 0;
+    padding-top: var(--spacing-4);
+    border-top: 1px solid var(--color-border);
+    color: var(--color-text-muted);
+    font-size: 0.76rem;
+    line-height: 1.6;
+  }
+
+  &__comparison {
+    width: 100%;
+    border-top: 1px solid var(--color-border-dark);
+  }
+
+  &__comparison-row {
+    display: grid;
+    grid-template-columns:
+      minmax(12rem, 0.8fr)
+      minmax(0, 1.2fr);
+    gap: var(--spacing-8);
+    align-items: start;
+    padding-block: var(--spacing-6);
+    border-bottom: 1px solid var(--color-border);
+
+    h3 {
+      max-width: 19rem;
+      margin: var(--spacing-2) 0 0;
+      color: var(--color-text);
+      font-family: var(--font-family-display);
+      font-size: 1.3rem;
+      font-weight: 400;
+      line-height: 1.35;
+    }
+
+    p {
+      max-width: 34rem;
+      margin: 0;
+      color: var(--color-text-soft);
+      font-size: 0.86rem;
+      line-height: 1.75;
+    }
+  }
+
+  &__comparison-label {
+    color: var(--color-accent-700);
+    font-size: 0.65rem;
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  &__aside-quote {
+    padding:
+      var(--spacing-5)
+      0
+      var(--spacing-5)
+      var(--spacing-5);
+    border-left: 2px solid var(--color-accent-500);
+
+    span {
+      color: var(--color-accent-700);
+      font-size: 0.65rem;
+      font-weight: var(--font-weight-bold);
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+    }
+
+    p {
+      max-width: 22rem;
+      margin: var(--spacing-3) 0 0;
+      color: var(--color-text);
+      font-family: var(--font-family-display);
+      font-size: 1.15rem;
+      line-height: 1.55;
+    }
+  }
+}
+
+.werkwijze-hero {
+  position: relative;
+  overflow: hidden;
+  padding:
+    clamp(5.25rem, 7vw, 7.5rem)
+    0
+    clamp(4.75rem, 6vw, 6.5rem);
+  border-bottom: 1px solid var(--color-border);
+  background:
+    linear-gradient(
+      135deg,
+      var(--color-cream) 0%,
+      var(--color-paper) 62%,
+      var(--color-cream-soft) 100%
+    );
+
+  &::before {
+    position: absolute;
+    top: -18rem;
+    right: -13rem;
+    width: 39rem;
+    height: 39rem;
+    border: 1px solid rgb(174 127 61 / 10%);
+    border-radius: 50%;
+    content: "";
+    pointer-events: none;
+  }
+
+  &::after {
+    position: absolute;
+    right: 20%;
+    bottom: -20rem;
+    width: 30rem;
+    height: 30rem;
+    border: 1px solid rgb(36 93 71 / 5%);
+    border-radius: 50%;
+    content: "";
+    pointer-events: none;
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__layout {
+    display: grid;
+    grid-template-columns:
+      minmax(24rem, 0.92fr)
+      minmax(0, 1.08fr);
+    gap: clamp(5rem, 9vw, 9rem);
+    align-items: center;
+  }
+
+  &__heading,
+  &__content {
+    min-width: 0;
+  }
+
+  &__eyebrow {
+    margin-bottom: var(--spacing-5);
+  }
+
+  &__title {
+    max-width: 10.5ch;
+    margin: 0;
+    color: var(--color-primary-950);
+    font-family: var(--font-family-display);
+    font-size: clamp(4rem, 5.5vw, 5.7rem);
+    font-weight: 400;
+    line-height: 0.98;
+    letter-spacing: -0.055em;
+    text-wrap: balance;
+
+    span {
+      color: var(--color-primary-700);
+    }
+  }
+
+  &__content {
+    max-width: 43rem;
+    padding-top: var(--spacing-6);
+    border-top: 1px solid var(--color-border-dark);
+  }
+
+  &__lead {
+    max-width: 41rem;
+    margin: 0;
+    color: var(--color-text-soft);
+    font-size: 1rem;
+    line-height: 1.85;
+  }
+
+  &__benefits {
+    display: grid;
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+    gap:
+      var(--spacing-4)
+      var(--spacing-7);
+    margin: var(--spacing-7) 0 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      display: grid;
+      grid-template-columns:
+        1.4rem
+        minmax(0, 1fr);
+      gap: var(--spacing-2);
+      align-items: start;
+      color: var(--color-text);
+      font-size: 0.83rem;
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    svg {
+      margin-top: 0.08rem;
+      color: var(--color-primary-700);
+    }
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--spacing-5);
+    margin-top: var(--spacing-8);
+  }
+
+  &__primary {
+    min-width: 13rem;
+  }
+
+  &__secondary {
+    display: inline-flex;
+    min-height: 3.15rem;
+    align-items: center;
+    justify-content: center;
+    padding-inline: var(--spacing-2);
+    border-bottom: 1px solid var(--color-border-dark);
+    color: var(--color-primary-800);
+    font-size: 0.84rem;
+    font-weight: var(--font-weight-semibold);
+    transition:
+      border-color var(--transition-fast),
+      color var(--transition-fast);
+
+    &:hover {
+      border-color: var(--color-accent-500);
+      color: var(--color-primary-600);
+    }
+  }
+
+  &__note {
+    margin: var(--spacing-4) 0 0;
+    color: var(--color-text-muted);
+    font-size: 0.72rem;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 1000px) {
+  .werkwijze-hero {
+    &__layout {
+      grid-template-columns:
+        minmax(20rem, 0.9fr)
+        minmax(0, 1.1fr);
+      gap: var(--spacing-10);
+    }
+
+    &__title {
+      font-size: clamp(3.4rem, 6vw, 4.5rem);
+    }
+
+    &__benefits {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .werkwijze-hero {
+    padding:
+      var(--spacing-16)
+      0
+      var(--spacing-12);
+
+    &__layout {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-8);
+    }
+
+    &__title {
+      max-width: 11ch;
+    }
+
+    &__content {
+      max-width: 44rem;
+    }
+
+    &__benefits {
+      grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .werkwijze-page {
+    &__prose {
+      gap: var(--spacing-3);
+
+      p {
+        font-size: 0.88rem;
+        line-height: 1.75;
+      }
+    }
+
+    &__info-panel {
+      padding: var(--spacing-5);
+    }
+
+    &__comparison-row {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-3);
+      padding-block: var(--spacing-5);
+
+      h3 {
+        max-width: none;
+        font-size: 1.15rem;
+      }
+
+      p {
+        max-width: none;
+        font-size: 0.82rem;
+      }
+    }
+
+    &__aside-quote {
+      padding-left: var(--spacing-4);
+
+      p {
+        max-width: none;
+        font-size: 1.05rem;
+      }
+    }
+  }
+
+  .werkwijze-hero {
+    padding:
+      var(--spacing-12)
+      0
+      var(--spacing-10);
+
+    &::before {
+      top: -9rem;
+      right: -10rem;
+      width: 21rem;
+      height: 21rem;
+    }
+
+    &::after {
+      display: none;
+    }
+
+    &__layout {
+      gap: var(--spacing-7);
+    }
+
+    &__eyebrow {
+      margin-bottom: var(--spacing-4);
+    }
+
+    &__title {
+      max-width: 10.5ch;
+      font-size: clamp(
+        2.7rem,
+        12vw,
+        3.7rem
+      );
+      line-height: 1;
+    }
+
+    &__content {
+      padding-top: var(--spacing-5);
+    }
+
+    &__lead {
+      max-width: none;
+      font-size: 0.91rem;
+      line-height: 1.72;
+    }
+
+    &__benefits {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-3);
+      margin-top: var(--spacing-6);
+
+      li {
+        font-size: 0.82rem;
+      }
+    }
+
+    &__actions {
+      align-items: stretch;
+      flex-direction: column;
+      gap: var(--spacing-3);
+      margin-top: var(--spacing-6);
+    }
+
+    &__primary,
+    &__secondary {
+      width: 100%;
+      min-height: 3.5rem;
+      justify-content: center;
+    }
+
+    &__secondary {
+      padding-inline: var(--spacing-4);
+      border: 1px solid var(--color-border-dark);
+      border-radius: var(--radius-md);
+      background: rgb(255 255 255 / 38%);
+    }
+
+    &__note {
+      margin-top: var(--spacing-3);
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .werkwijze-page {
+    &__info-panel {
+      padding: var(--spacing-4);
+    }
+
+    &__checklist {
+      gap: var(--spacing-3);
+
+      li {
+        font-size: 0.81rem;
+      }
+    }
+
+    &__comparison-row {
+      padding-block: var(--spacing-4);
+
+      h3 {
+        font-size: 1.08rem;
+      }
+
+      p {
+        font-size: 0.79rem;
+        line-height: 1.68;
+      }
+    }
+  }
+
+  .werkwijze-hero {
+    padding:
+      var(--spacing-10)
+      0
+      var(--spacing-10);
+
+    &__layout {
+      gap: var(--spacing-6);
+    }
+
+    &__title {
+      max-width: 10ch;
+      font-size: clamp(
+        2.4rem,
+        12vw,
+        3rem
+      );
+    }
+
+    &__lead {
+      font-size: 0.87rem;
+    }
+
+    &__benefits li {
+      font-size: 0.79rem;
+    }
+
+    &__primary,
+    &__secondary {
+      min-height: 3.4rem;
+      font-size: 0.8rem;
+    }
+  }
+}
+
+@media (max-width: 340px) {
+  .werkwijze-hero {
+    &__title {
+      font-size: 2.2rem;
+    }
+
+    &__lead {
+      font-size: 0.84rem;
+    }
+  }
+}
+
+.werkwijze-page__steps-anchor {
+  scroll-margin-top: calc(var(--header-height) + 1rem);
+}

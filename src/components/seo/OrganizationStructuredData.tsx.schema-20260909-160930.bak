@@ -1,0 +1,70 @@
+﻿const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ||
+  "https://haagvast.nl";
+
+export default function OrganizationStructuredData() {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": `${siteUrl}/#organization`,
+    name: "Haagvast",
+    url: siteUrl,
+    description:
+      "Haagvast koopt woningen rechtstreeks in Den Haag, Haaglanden en omgeving.",
+    areaServed: [
+      {
+        "@type": "City",
+        name: "Den Haag",
+      },
+      {
+        "@type": "City",
+        name: "Voorburg",
+      },
+      {
+        "@type": "City",
+        name: "Leidschendam",
+      },
+      {
+        "@type": "City",
+        name: "Rijswijk",
+      },
+      {
+        "@type": "City",
+        name: "Delft",
+      },
+      {
+        "@type": "City",
+        name: "Wassenaar",
+      },
+      {
+        "@type": "City",
+        name: "Zoetermeer",
+      },
+      {
+        "@type": "AdministrativeArea",
+        name: "Pijnacker-Nootdorp",
+      },
+      {
+        "@type": "AdministrativeArea",
+        name: "Midden-Delfland",
+      },
+      {
+        "@type": "AdministrativeArea",
+        name: "Westland",
+      },
+      {
+        "@type": "City",
+        name: "Voorschoten",
+      },
+    ],
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(structuredData).replace(/</g, "\\u003c"),
+      }}
+    />
+  );
+}

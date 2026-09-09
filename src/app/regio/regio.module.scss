@@ -1,0 +1,568 @@
+﻿.page {
+  width: 100%;
+  overflow: hidden;
+  background: var(--color-background);
+}
+
+.container {
+  width: min(calc(100% - 3rem), var(--container-lg));
+  margin-inline: auto;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+  position: relative;
+  display: flex;
+  min-height: clamp(34rem, 72vh, 46rem);
+  align-items: center;
+  overflow: hidden;
+  padding-block: clamp(6rem, 11vw, 9rem);
+  background:
+    radial-gradient(
+      circle at 85% 25%,
+      rgb(255 255 255 / 5%),
+      transparent 34rem
+    ),
+    var(--color-primary-950);
+  color: var(--color-white);
+}
+
+.hero::after {
+  position: absolute;
+  right: -8rem;
+  bottom: -13rem;
+  width: 30rem;
+  height: 30rem;
+  border: 1px solid rgb(255 255 255 / 7%);
+  border-radius: 50%;
+  content: "";
+}
+
+.heroInner {
+  position: relative;
+  z-index: 1;
+  max-width: 52rem;
+}
+
+.eyebrow,
+.eyebrowDark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: var(--spacing-5);
+  font-size: 0.72rem;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.13em;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.eyebrow {
+  color: rgb(255 255 255 / 72%);
+}
+
+.eyebrowDark {
+  color: var(--color-primary-700);
+}
+
+.eyebrow::before,
+.eyebrowDark::before {
+  width: 1.5rem;
+  height: 1px;
+  flex: 0 0 1.5rem;
+  background: var(--color-accent-600);
+  content: "";
+}
+
+.hero h1 {
+  max-width: 12ch;
+  margin: 0;
+  color: var(--color-white);
+  font-family: var(--font-family-display);
+  font-size: clamp(3.2rem, 6vw, 5.5rem);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: -0.055em;
+  line-height: 0.98;
+  text-wrap: balance;
+}
+
+.heroText {
+  max-width: 43rem;
+  margin-top: var(--spacing-6);
+  color: rgb(255 255 255 / 72%);
+  font-size: clamp(1rem, 1.6vw, 1.12rem);
+  line-height: 1.8;
+}
+
+.heroActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-3);
+  margin-top: var(--spacing-8);
+}
+
+.primaryButton,
+.secondaryButton,
+.darkButton {
+  display: inline-flex;
+  min-height: 3.35rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem 1.4rem;
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  font-weight: var(--font-weight-semibold);
+  line-height: 1;
+  text-decoration: none;
+  transition:
+    transform var(--transition-fast),
+    border-color var(--transition-fast),
+    background-color var(--transition-fast),
+    color var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.primaryButton {
+  border-color: var(--color-white);
+  background: var(--color-white);
+  color: var(--color-primary-950);
+}
+
+.primaryButton:hover {
+  box-shadow: 0 12px 28px rgb(0 0 0 / 17%);
+  transform: translateY(-2px);
+}
+
+.secondaryButton {
+  border-color: rgb(255 255 255 / 28%);
+  background: rgb(255 255 255 / 4%);
+  color: var(--color-white);
+}
+
+.secondaryButton:hover {
+  border-color: rgb(255 255 255 / 55%);
+  background: rgb(255 255 255 / 9%);
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   GENERIEKE SECTIES
+   ========================================================= */
+
+.lightSection,
+.softSection {
+  position: relative;
+  padding-block: clamp(5rem, 9vw, 8rem);
+}
+
+.lightSection {
+  background: var(--color-paper);
+}
+
+.softSection {
+  background: var(--color-background-soft);
+}
+
+.twoColumn {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 0.85fr)
+    minmax(0, 1.15fr);
+  align-items: start;
+  gap: clamp(3rem, 8vw, 7rem);
+}
+
+.twoColumn h2,
+.sectionHeading h2,
+.ctaInner h2 {
+  margin: 0;
+  color: var(--color-text);
+  font-family: var(--font-family-display);
+  font-size: clamp(2.35rem, 4.3vw, 4rem);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: -0.045em;
+  line-height: 1.06;
+  text-wrap: balance;
+}
+
+.textColumn {
+  display: grid;
+  gap: var(--spacing-5);
+  max-width: 43rem;
+}
+
+.textColumn p,
+.sectionIntro {
+  margin: 0;
+  color: var(--color-text-soft);
+  font-size: 1rem;
+  line-height: 1.85;
+}
+
+.textColumn p:first-child {
+  color: var(--color-text);
+  font-size: 1.08rem;
+}
+
+/* =========================================================
+   GEBIEDEN
+   ========================================================= */
+
+.sectionIntro {
+  max-width: 42rem;
+  margin-bottom: var(--spacing-8);
+}
+
+.areaGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 1px solid var(--color-border-dark);
+}
+
+.areaItem {
+  display: flex;
+  min-height: 4.25rem;
+  align-items: center;
+  gap: var(--spacing-3);
+  padding: var(--spacing-4) var(--spacing-3);
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text);
+  font-size: 0.94rem;
+  font-weight: var(--font-weight-semibold);
+}
+
+.areaItem:nth-child(odd) {
+  border-right: 1px solid var(--color-border);
+}
+
+.check {
+  display: inline-flex;
+  width: 1.8rem;
+  height: 1.8rem;
+  flex: 0 0 1.8rem;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-border-dark);
+  border-radius: 50%;
+  color: var(--color-primary-700);
+  font-size: 0.72rem;
+  font-weight: var(--font-weight-bold);
+}
+
+/* =========================================================
+   WERKWIJZE
+   ========================================================= */
+
+.sectionHeading {
+  display: grid;
+  max-width: 48rem;
+  margin-bottom: clamp(3rem, 6vw, 5rem);
+}
+
+.sectionHeading p {
+  max-width: 39rem;
+  margin-top: var(--spacing-5);
+  color: var(--color-text-soft);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 1px solid var(--color-border-dark);
+}
+
+.step {
+  position: relative;
+  min-width: 0;
+  padding: var(--spacing-6);
+  border-right: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.step:first-child {
+  border-left: 1px solid var(--color-border);
+}
+
+.stepNumber {
+  display: block;
+  margin-bottom: var(--spacing-8);
+  color: var(--color-accent-600);
+  font-family: var(--font-family-display);
+  font-size: 0.82rem;
+  line-height: 1;
+}
+
+.step h3 {
+  margin: 0 0 var(--spacing-3);
+  color: var(--color-text);
+  font-family: var(--font-family-display);
+  font-size: 1.45rem;
+  font-weight: var(--font-weight-regular);
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+}
+
+.step p {
+  margin: 0;
+  color: var(--color-text-soft);
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   ENIGE GROENE CTA OP DE REGIOPAGINA
+   ========================================================= */
+
+.ctaSection {
+  position: relative;
+  padding-block: clamp(5rem, 8vw, 7rem);
+  overflow: hidden;
+  background: var(--color-primary-800);
+}
+
+.ctaSection::after {
+  position: absolute;
+  top: -11rem;
+  right: -7rem;
+  width: 28rem;
+  height: 28rem;
+  border: 1px solid rgb(255 255 255 / 8%);
+  border-radius: 50%;
+  content: "";
+}
+
+.ctaInner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1.15fr)
+    minmax(18rem, 0.85fr);
+  align-items: center;
+  gap: clamp(3rem, 8vw, 7rem);
+}
+
+.ctaSection .eyebrowDark {
+  color: rgb(255 255 255 / 66%);
+}
+
+.ctaSection .eyebrowDark::before {
+  background: var(--color-accent-600);
+}
+
+.ctaInner h2 {
+  max-width: 14ch;
+  color: var(--color-white);
+}
+
+.ctaRight {
+  display: flex;
+  max-width: 34rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-6);
+}
+
+.ctaRight p {
+  margin: 0;
+  color: rgb(255 255 255 / 74%);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.darkButton {
+  border-color: var(--color-white);
+  background: var(--color-white);
+  color: var(--color-primary-950);
+}
+
+.darkButton:hover {
+  box-shadow: 0 12px 28px rgb(0 0 0 / 17%);
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+.primaryButton:focus-visible,
+.secondaryButton:focus-visible,
+.darkButton:focus-visible {
+  outline: 3px solid rgb(255 255 255 / 34%);
+  outline-offset: 4px;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1024px) {
+  .hero {
+    min-height: 38rem;
+  }
+
+  .twoColumn {
+    gap: 3.5rem;
+  }
+
+  .steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .step:nth-child(3) {
+    border-left: 1px solid var(--color-border);
+  }
+
+  .ctaInner {
+    grid-template-columns: 1fr 0.85fr;
+    gap: 3rem;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .container {
+    width: calc(100% - 2rem);
+  }
+
+  .hero {
+    min-height: auto;
+    padding-block: 5.5rem;
+  }
+
+  .hero::after {
+    right: -13rem;
+    bottom: -16rem;
+  }
+
+  .hero h1 {
+    max-width: 10ch;
+    font-size: clamp(2.8rem, 13vw, 4rem);
+  }
+
+  .heroText {
+    margin-top: var(--spacing-5);
+    font-size: 0.98rem;
+  }
+
+  .heroActions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+  }
+
+  .lightSection,
+  .softSection {
+    padding-block: var(--spacing-14);
+  }
+
+  .twoColumn {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-8);
+  }
+
+  .twoColumn h2,
+  .sectionHeading h2,
+  .ctaInner h2 {
+    font-size: clamp(2.1rem, 10vw, 3rem);
+  }
+
+  .areaGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .areaItem:nth-child(odd) {
+    border-right: 0;
+  }
+
+  .steps {
+    grid-template-columns: 1fr;
+  }
+
+  .step,
+  .step:first-child,
+  .step:nth-child(3) {
+    border-right: 0;
+    border-left: 0;
+  }
+
+  .step:first-child {
+    border-top: 0;
+  }
+
+  .stepNumber {
+    margin-bottom: var(--spacing-5);
+  }
+
+  .ctaInner {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-8);
+  }
+
+  .ctaInner h2 {
+    max-width: none;
+  }
+
+  .ctaRight {
+    max-width: none;
+  }
+
+  .darkButton {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+  .container {
+    width: calc(100% - 1.5rem);
+  }
+
+  .hero {
+    padding-block: 4.75rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.55rem, 13vw, 3.35rem);
+  }
+
+  .lightSection,
+  .softSection,
+  .ctaSection {
+    padding-block: var(--spacing-12);
+  }
+
+  .step {
+    padding-inline: 0.25rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .primaryButton,
+  .secondaryButton,
+  .darkButton {
+    transition: none;
+  }
+
+  .primaryButton:hover,
+  .secondaryButton:hover,
+  .darkButton:hover {
+    transform: none;
+  }
+}
