@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -705,10 +705,6 @@ export default function Header() {
             <span className="header__logo-accent">
               Vast
             </span>
-
-            <span className="header__logo-dot">
-              .
-            </span>
           </Link>
 
           <nav
@@ -1294,7 +1290,7 @@ export default function Header() {
               <span>Haag</span>
 
               <span className="mobile-navigation__logo-accent">
-                Vast.
+                Vast
               </span>
             </Link>
 
