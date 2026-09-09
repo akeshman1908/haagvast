@@ -51,3 +51,19 @@ next-env.d.ts
 .azure-haagvast.local.json
 .next/
 node_modules/
+
+# HaagVast local backups
+_backup/
+.haagvast-backup-*/
+*.bak
+*.backup
+*.backup.*
+build-debug.txt
+duplicate-route-debug.txt
+.azure-haagvast.local.json
+
+# Local Next / environment
+.env
+.env.local
+.next/
+node_modules/
